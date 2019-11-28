@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>治ったぞー</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                tags: 'all'
+            }
+        }
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+    <h1 class="quote" author="Takanashi Rikka">Vanishment this world!</h1>
+
+    <h3 class="definition" text="World">
+        A world is a 3-tuple $(\Omega,A,\delta)$ such that:<br>
+        <ul>
+            <li>$\Omega,A$ are two nonempty sets;</li>
+            <li>$\delta:\Omega\times A\to\{0,1\}$.</li>
+        </ul>
+        An element of $\Omega$ is called a <i>state</i>. An element of $A$ is called a <i>thing</i>. For $\omega\in\Omega$ and $a\in A$, we say thing $a$ <i>exists</i> in state $\omega$ if $\delta(\omega,a)=1$, and the opposite if
+        $\delta(\omega,a)=0$.
+    </h3>
+
+    <p>In the rest of this daydream, $(\Omega,A,\delta)$ is a world as defined above.</p>
+
+    <p>Let $\omega\in\Omega$.</p>
+
+    <h3 class="definition">
+        For $a,b\in A$, we note $a\sim_\omega b$ if $\delta(\omega,a)=1\iff\delta(\omega,b)=1$.
+    </h3>
+
+    <h3 class="proposition">
+        $\sim_\omega$ is an equivalence relation on $A$.
+    </h3>
+    <h4 class="proof">It's obvious.</h4>
+
+    <h3 class="definition">We note $A_\omega=A/\sim_\omega$ and $\delta_\omega:A_\omega\to\{0,1\}$, $[a]\mapsto \delta(\omega,a)$.</h3>
+
+    <!-- <h3 class="definition" text="Sense">
+        For $a,b\in A_\omega$, we say $a$ <i>senses</i> $b$ in state $\omega$ if $\delta_\omega(a)=1\implies\delta_\omega(b)=1$. We note $a\mathcal{S}_\omega b$.
+    </h3> -->
+
+    <h3 class="definition" text="Sense">
+        For $a,b\in A$, we say $a$ <i>senses</i> $b$ if $\exists\omega\in\Omega$, $\delta_\omega(a)=1\implies\delta_\omega(b)=1$. We note $a\mathcal{S}b$.
+    </h3>
+
+    <h3 class="proposition">
+        $\mathcal{S}_\omega$ is a total order on $A_\omega$.
+    </h3>
+    <h4 class="proof">It's obvious.</h4>
+
+</body>
+
+</html>

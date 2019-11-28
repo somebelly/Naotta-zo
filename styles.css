@@ -1,0 +1,130 @@
+body {
+    zoom: 233%;
+    counter-reset: theorem;
+    counter-reset: definition;
+}
+
+h2, h3, h4 {
+    display: block;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* definition */
+.definition {
+    counter-increment: definition;
+}
+
+.definition:before {
+    content: "Definition "counter(definition)"\2000";
+    font-weight: bold;
+}
+
+.definition[text]:before {
+    content: "Definition "counter(definition)" ("attr(text) ")\2000";
+}
+
+/* theorem */
+.theorem {
+    counter-reset: corollary;
+    counter-increment: theorem;
+    font-style: italic;
+}
+
+.theorem:before {
+    content: "Theorem "counter(theorem)"\2000";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.theorem[text]:before {
+    content: "Theorem "counter(theorem)" ("attr(text) ")\2000";
+}
+
+/* lemma */
+.lemma {
+    counter-reset: corollary;
+    counter-increment: theorem;
+    font-style: italic;
+}
+
+.lemma:before {
+    content: "Lemma "counter(theorem)"\2000";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.lemma[text]:before {
+    content: "Lemma "counter(theorem)" ("attr(text) ")\2000";
+}
+
+/* proposition */
+.proposition {
+    counter-reset: corollary;
+    counter-increment: theorem;
+    font-style: italic;
+}
+
+.proposition:before {
+    content: "Proposition "counter(theorem)"\2000";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.proposition[text]:before {
+    content: "Proposition "counter(theorem)" ("attr(text) ")\2000";
+}
+
+/* corollary */
+.corollary {
+    counter-increment: corollary;
+    font-style: italic;
+}
+
+.corollary:before {
+    content: "Corollary "counter(theorem)"."counter(corollary)"\2000";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.corollary[text]:before {
+    content: "Corollary "counter(theorem)"."counter(corollary)" ("attr(text) ")\2000";
+}
+
+/* remark */
+.remark:before {
+    content: "Remark.\2000";
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* proof */
+.proof {
+    width: 80%;
+    margin: auto;
+}
+
+.proof:before {
+    content: "Proof.\2000";
+    font-style: italic;
+}
+
+.proof:after {
+    display: flex;
+    content: "\25A1";
+    justify-content: flex-end;
+}
+
+/* quote */
+.quote {
+    display: block;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.quote[author]:after {
+    display: flex;
+    content: "\2014\0020"attr(author);
+    justify-content: flex-end;
+}
