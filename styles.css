@@ -127,4 +127,6 @@ h2, h3, h4 {
     display: flex;
     content: "\2014\0020"attr(author);
     justify-content: flex-end;
+    font-style: normal;
+    font-size: smaller;
 }
