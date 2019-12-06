@@ -37,64 +37,30 @@
         \renewcommand{\phi}{\varphi}$
     </h1>
 
-
-
-    <h3 class="definition" text="World">
-        A world is a 3-tuple $(\Omega,A,\delta)$ such that:<br>
+    <h3 class="definition" text="Thing, World, Sense">
+        A thing is a 3-tuple $(G,A,\delta)$ such that:<br>
         <ul>
-            <li>$\Omega,A$ are two nonempty sets;</li>
-            <li>$\delta:\Omega\times A^2\to\GF(2)=\{0,1\}$.</li>
+            <li>$G=(V,E)$ is a directed graph;</li>
+            <li>$A,V$ are two nonempty sets;</li>
+            <li>$\delta:A \times V\to\GF(2)=\{0,1\}$.</li>
         </ul>
-        An element of $\Omega$ is called a <u>state</u>. An element of $A$ is called a <u>thing</u>.
+        The directed graph $G$ is called the <i>world</i> of the thing. A vertex of $G$ is called a <i>state of world</i> that the thing thinks existing. An element of $A$ is called an <i>another thing</i> that the thing thinks existing. For $a \in
+        A$ and $v \in V$, we
+        say the thing <i>senses</i>
+        $a$ in $v$ if $\delta(a,v)=1$, and the opposite if $\delta(a,v)=0$.
     </h3>
 
-    <p>In the rest of this daydream, $(\Omega,A,\delta)$ is a world as defined above.</p>
+    <p>In the rest of this daydream, $(G,A,\delta)$ is a thing as defined above, where $G=(V,E)$.</p>
 
     <h3 class="definition" text="Subjective World">
-        Let $\omega\in\Omega$ and $a\in A$. For $b\in A$, we say thing $a$ <u>thinks</u> thing $b$ <u>exists</u> in state $\omega$ if $\delta(\omega,a,b)=1$, and the opposite if
-        $\delta(\omega,a,b)=0$. The subjective world of $a$ in state $\omega$ is defined as $\SW_{a,\omega}:=\big(\delta(\omega,a,b)\big)_{b\in A}\in \GF(2)^A$.<br>
+        A <i>subjective world</i> of the thing is a walk in $G$.
     </h3>
 
-    <p>
-        For $x\in\{0,1\}$, we note:
-        <ul>
-            <li>for $\omega\in\Omega$ and $a\in A$, $\[x\]_{a,\omega}:=\{b\in A\mid \delta(\omega,a,b)=x\}$;</li>
-            <li>for $a\in A$, $\[x\]_{a}:=\{b\in A\mid\forall\omega\in\Omega,\, \delta(\omega,a,b)=x\}$;</li>
-            <li>$\[x\]:=\{b\in A\mid\forall\omega\in\Omega,\,\forall a\in A,\, \delta(\omega,a,b)=x\}$.</li>
-        </ul>
-    </p>
+    <p>Let $w=(v_0,v_1,\dots)$ be a subjective world of the thing as defined above.</p>
 
-
-    <h3 class="definition" text="Life">
-        We say $a\in A$ is a <u>living thing</u> if $a$ <u>always</u> thinks itself existing, i.e. $a\in\[1\]_{a}$.
+    <h3 class="definition" text="Time">
+        For $u,v$ two vertices of $w$, if there exists a finite sub-walk of $w$ which starts at $u$ and ends at $v$, then we say $u$ is a <i>past</i> of $v$, and that $v$ is a <i>future</i> of $u$.
     </h3>
-
-    <h3 class="definition" text="Sense">
-        For $a,b\in A$, we say $a$ <u>senses</u> $b$ (noted $a\S b$) if $\exists \omega\in\Omega$ such that:
-        <ul>
-            <li>$b\in\[1\]_{a,\omega}$, and that</li>
-            <li>$\forall x\in\[1\]_{a,\omega}$, $b\in\[1\]_{x,\omega}$.</li>
-        </ul>
-    </h3>
-
-    <!-- <h3 class="proposition">
-        $\sim_\omega$ is an equivalence relation on $A$.
-    </h3>
-    <h4 class="proof">It's obvious.</h4>
-
-    <h3 class="definition">We note $A_\omega=A/\sim_\omega$ and $\delta_\omega:A_\omega\to\{0,1\}$, $[a]\mapsto \delta(\omega,a)$.</h3> -->
-
-    <!-- <h3 class="definition" text="Sense">
-        For $a,b\in A_\omega$, we say $a$ <u>senses</u> $b$ in state $\omega$ if $\delta_\omega(a)=1\implies\delta_\omega(b)=1$. We note $a\mathcal{S}_\omega b$.
-    </h3> -->
-
-
-
-    <!-- <h3 class="proposition">
-        $\mathcal{S}_\omega$ is a total order on $A_\omega$.
-    </h3>
-    <h4 class="proof">It's obvious.</h4> -->
-
 </body>
 
 </html>
