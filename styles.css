@@ -1,7 +1,10 @@
 body {
-    zoom: 233%;
+    margin-left: 5%;
+    margin-right: 5%;
     counter-reset: theorem;
     counter-reset: definition;
+    font-family: "Bitstream Charter", "STIXGeneral", "Nimbus Roman No9 L", "LMRoman10", Times New Roman, Serif;
+    font-size: 150%;
 }
 
 h2, h3, h4 {
@@ -125,7 +128,7 @@ h2, h3, h4 {
 
 .quote[author]:after {
     display: flex;
-    content: "\2014\0020"attr(author);
+    content: "\2014\2014\0020"attr(author);
     justify-content: flex-end;
     font-style: normal;
     font-size: smaller;
