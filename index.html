@@ -42,7 +42,7 @@
         <ul>
             <li>$G=(V,E)$ is a directed graph;</li>
             <li>$A,V$ are two nonempty sets;</li>
-            <li>$\delta:A \times V\to\GF(2)=\{0,1\}$.</li>
+            <li>$\delta:A \times V\to\GF(2)$.</li>
         </ul>
         The directed graph $G$ is called the <i>world</i> of the thing. A vertex of $G$ is called a <i>state of world</i> that the thing thinks existing. An element of $A$ is called an <i>another thing</i> that the thing thinks existing. For $a \in
         A$ and $v \in V$, we
@@ -59,7 +59,17 @@
     <p>Let $w=(v_0,v_1,\dots)$ be a subjective world of the thing as defined above.</p>
 
     <h3 class="definition" text="Time">
-        For $u,v$ two vertices of $w$, if there exists a finite sub-walk of $w$ which starts at $u$ and ends at $v$, then we say $u$ is a <i>past</i> of $v$, and that $v$ is a <i>future</i> of $u$.
+        For $u,v$ two vertices of $w$, if there exists a finite sub-walk of $w$ which starts at $u$ and ends at $v$, then $u$ is called a <i>past</i> of $v$, and $v$ is called a <i>future</i> of $u$.
+    </h3>
+
+    <h3 class="definition" text="Living thing">
+        If there exists $e \in A$ such that $\forall v \in w$, $\delta(e,v)=1$, the thing is then called a <i>living thing</i>, and $e$ is called its <i>ego</i>.
+    </h3>
+
+    <p>In the rest of this daydream, we focus on a living thing $L = (T, w, e)$ as defined above, where $T = (G,A,\delta)$ is the thing itself, $w=(v_0,v_1,\dots)$ is its subjective world, and $e \in A$ is its ego.</p>
+
+    <h3 class="definition" text="Death">
+        $L$ is called <i>mortal</i> (<i>immortal</i>) if $w$ is finite (infinite).
     </h3>
 </body>
 
